@@ -9,8 +9,8 @@ dotenv.config({
 })
 
 const client = new MeiliSearch({
-  host: process.env.MEILI_HOST_NAME || "http://localhost:7700",
-  apiKey: process.env.MEILI_API_KEY,
+  host: process.env.NEXT_PUBLIC_MEILI_HOST_NAME || "http://localhost:7700",
+  apiKey: process.env.NEXT_PUBLIC_MEILI_API_KEY,
 })
 
 const INDEX_NAME = 'products'

@@ -1,0 +1,9 @@
+version: "3.6"
+
+services:
+  meilisearch:
+    image: getmeili/meilisearch:v1.6
+    ports:
+      - 7700:7700
+    env_file:
+      - .env.local

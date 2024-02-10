@@ -1,6 +1,15 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import { InstantSearch } from 'react-instantsearch';
+import { instantMeiliSearch } from '@meilisearch/instant-meilisearch';
+
+import NavBar from "@/components/NavBar/NavBar";
+import "@/styles/globals.css";
+
+const { searchClient } = instantMeiliSearch(
+  process.env.MEILI_HOST_NAME || 'http://localhost:7700',
+  process.env.MEILI_API_KEY
+);
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +25,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+      <InstantSearch indexName="products" searchClient={searchClient}>
+        <NavBar />
+        {children}
+      </InstantSearch>
+      </body>
     </html>
   );
 }

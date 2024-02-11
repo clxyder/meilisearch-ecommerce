@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { SearchBox } from 'react-instantsearch';
 import styles from '@/styles/nav-bar.module.css';

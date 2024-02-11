@@ -1,14 +1,13 @@
-import Image from "next/image";
 import styles from '@/styles/home.module.css';
-// import { SearchResult} from '@/components/Search/SearchResult';
+import { SearchResults } from '@/components/Search/SearchResults';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main>
       <div className={styles.container}>
         <main className={styles.main}>
           <div className={styles.mainContent}>
-            {/* <Results /> */}
+            <SearchResults />
           </div>
         </main>
       </div>

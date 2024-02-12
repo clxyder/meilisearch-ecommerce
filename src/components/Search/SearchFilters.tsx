@@ -2,6 +2,7 @@ import React from 'react';
 import {
   ClearRefinements,
   RefinementList,
+  RangeInput,
 } from 'react-instantsearch'
 // import CustomRangeSlider from '../slider/Slider'
 import { RatingMenu } from '../RatingMenu/RatingMenu';
@@ -19,8 +20,8 @@ const SearchFilters = () => (
     <RefinementList attribute="tag" />
     <h4>Brands</h4>
     <RefinementList attribute="brand" showMore />
-    {/* <h4>Price</h4>
-    <CustomRangeSlider attribute="price" /> */}
+    <h4>Price</h4>
+    <RangeInput attribute="price" />
     <h4 style={{ marginTop: '5rem' }}>Rating</h4>
     <RatingMenu attribute="rating" max={5} />
   </div>

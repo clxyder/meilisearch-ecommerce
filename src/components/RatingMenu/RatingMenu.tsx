@@ -31,7 +31,9 @@ export function RatingMenu(props: UseRatingMenuProps) {
 
               refine(item.value);
             }}
+            className='grid grid-rows-2'
           >
+            <div className='flex flex-col sm:flex-row'>
             {item.stars.map((isFilled, index) => (
               <svg
                 key={index}
@@ -62,9 +64,12 @@ export function RatingMenu(props: UseRatingMenuProps) {
             <span>
               {item.value} &amp; Up
             </span>
+            </div>
+            <div>
             <span>
               {item.count} matched results
             </span>
+            </div>
           </a>
         </li>
       ))}

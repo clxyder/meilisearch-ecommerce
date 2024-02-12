@@ -1,5 +1,3 @@
-"use client";
-
 import React from 'react';
 import { useConnector } from 'react-instantsearch';
 import connectRatingMenu from 'instantsearch.js/es/connectors/rating-menu/connectRatingMenu';

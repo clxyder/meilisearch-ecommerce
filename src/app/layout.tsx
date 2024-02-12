@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import InstantSearchLayout from "@/components/InstantSearchLayout/InstantSearchLayout";
 import "@/styles/globals.css";
+import "@/styles/searchBoxAIS.css";
 
 const inter = Inter({ subsets: ["latin"] });
 

@@ -17,7 +17,7 @@ export default function InstantSearchLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <InstantSearch indexName="products" searchClient={searchClient}>
+    <InstantSearch indexName="products" searchClient={searchClient} future={{preserveSharedStateOnUnmount: true}}>
       <NavBar />
       {children}
     </InstantSearch>
